@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <b align="center"><h1>Fill Account Details</h1></b><hr>
+    <form align="center">
+        <label for="accno">
+            Account No:
+            <input type="text" id="accno" oninput="update()">
+        </label>
+
+        <label for="name">
+          User Name:
+            <input type="text" id="name" onkeyup="update()">
+        </label>
+
+        <label for="amount">
+            Amount:
+            <input type="number" id="amount" oninput="update()">
+        </label><br><br>
+    </form>
+    <h2 align="center">Check Book</h2>
+    <table align="center">
+        <tbody>
+            <tr>
+                <th>Account Number</th>
+                <td><span id="accfill"></span></td>
+                <th>Date</th>
+                <td class="date"><span id="Date"></span></td> 
+            </tr>
+            <tr>
+                <th>Holder Name</th>
+                <td colspan="3"><span id="HolderName"></span></td>
+            </tr>
+            <tr>
+                <th>Amount</th>
+                <td colspan="3"><span id="ammunt"></span></td>
+            </tr>
+            <tr>
+                <th>Words</th>
+                <td colspan="3"><span id="words"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
