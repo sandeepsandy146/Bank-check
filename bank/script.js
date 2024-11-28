@@ -27,8 +27,17 @@ function convertToWords(amount) {
         if (ones > 0) {
             words += " " + one[ones];
         }
-    } else if (amount === 100) {
-        words = "One Hundred";
+    } 
+    else if (amount >= 100 && amount <= 999) {
+        const hundreds = Math.floor(amount / 100);
+        const remain = amount % 100;
+        words += one[hundreds] + " Hundred";
+        if (remain > 0) {
+            words += " and " + convertToWords(remain);
+        }
+    } 
+    else if (amount === 1000) {
+        words = "One Thousand";
     }
     return words;
 }
